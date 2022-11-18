@@ -1,0 +1,92 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+input,
+textarea,
+select,
+p,
+li,
+label,
+button {
+}
+
+// Set fonts for the headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+/* Code for Firefox */
+::-moz-selection {
+  color: white;
+}
+
+::selection {
+  color: white;
+}
+
+@mixin fontSmaller {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+@mixin fontSmall {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+@mixin fontLarge {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+@mixin fontLarger {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+p,
+figcaption,
+span,
+small,
+td,
+th,
+label,
+blockquote,
+cite,
+input,
+textarea,
+li,
+pre {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+// Set the margins on these elements
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}

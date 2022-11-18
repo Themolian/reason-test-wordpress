@@ -1,0 +1,47 @@
+// styles wrapped in this tag are from the CMS editor
+.contentArea {
+  a {
+    color: $primary;
+    text-decoration: underline;
+    &:hover {
+      color: black;
+    }
+  }
+
+  ul {
+    margin-top: 0px;
+    margin-bottom: 18px;
+    padding-left: 17px;
+    list-style-type: square;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    li {
+      margin-bottom: 9px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol {
+    margin-top: 0px;
+    margin-bottom: 18px;
+    padding-left: 17px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    li {
+      margin-bottom: 9px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    border: solid 4px black;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,126 @@
+.events {
+  padding: 0 20px;
+  &-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 0;
+    @media (min-width: 768px) {
+      padding: 50px 0;
+    }
+  }
+  &-cards {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 0 -40px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin: 0 -20px -40px;
+    }
+  }
+  &-card {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 0.2s all;
+    margin: 0 0 40px;
+    &:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      a.button {
+        background-color: $brand-red;
+        color: white;
+      }
+    }
+    h3 {
+      font-size: 1.2rem;
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+    &__body {
+      padding: 40px 40px 20px;
+    }
+    &__details {
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      p {
+        font-size: 0.9rem;
+        &.location,
+        &.date {
+          display: flex;
+          align-items: center;
+          &:before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            padding-right: 10px;
+          }
+        }
+        &.location {
+          &:before {
+            background-image: url(../../min/img/svg/pin.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+        }
+        &.date {
+          &:before {
+            background-image: url(../../min/img/svg/calendar.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+        }
+      }
+      @media (min-width: 1170px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    &__footer {
+      padding: 0 40px 40px;
+    }
+    @media (min-width: 768px) {
+      width: calc(33.333333% - 40px);
+      margin: 0 20px 40px;
+    }
+  }
+}
+
+.link-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.events-listing {
+  padding: 0 20px;
+  &__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 0;
+    .button {
+      display: inline-flex;
+    }
+    @media (min-width: 768px) {
+      padding: 50px 0;
+    }
+  }
+  &__footer {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    @media (min-width: 768px) {
+      margin-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+// Top level stuff
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+// Always show scrollbars to prevent some browsers jumping
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+main {
+  padding: 0 20px;
+  .main-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 0;
+    @media (min-width: 768px) {
+      padding: 50px 0;
+    }
+  }
+}
+
+// responsive images by default
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  &::selection {
+    background-color: darken($cyan, 20%);
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+.text-large p,
+p.large {
+  margin-bottom: 24px;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+p,
+span,
+select,
+option,
+input,
+textarea {
+  font-family: $font-primary;
+  &::selection {
+    background-color: darken($cyan, 20%);
+  }
+}

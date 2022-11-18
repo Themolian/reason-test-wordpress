@@ -1,0 +1,4 @@
+@mixin font-size($number) {
+  font-size: $number;
+  line-height: calc($number / 1.618 + $number);
+}

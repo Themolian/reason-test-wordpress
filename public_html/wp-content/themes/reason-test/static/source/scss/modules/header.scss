@@ -1,0 +1,126 @@
+.header {
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  &-top {
+    border-bottom: 1px solid #ccc;
+    &__inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__search {
+      max-width: 135px;
+      margin-right: 25px;
+      .searchform {
+        background-color: white;
+        position: relative;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        padding: 0 20px;
+        overflow: hidden;
+        input {
+          &[type="text"] {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            font-family: $font-primary;
+            font-weight: bold;
+            width: 100%;
+            padding-left: 25px;
+            &::placeholder {
+              color: black;
+              opacity: 1;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+          &[type="submit"] {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-image: url(../../min/img/svg/search.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-color: transparent;
+            text-indent: -9999px;
+            border: 0;
+          }
+        }
+      }
+    }
+    &__links {
+      display: flex;
+    }
+  }
+  &-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  &-logo {
+    max-width: 200px;
+    min-width: 180px;
+    img {
+      width: 100%;
+    }
+  }
+  &-navigation {
+    display: none;
+    ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      li {
+        a {
+          font-family: $font-primary;
+          color: black;
+          position: relative;
+          &:hover,
+          &:focus {
+            &:after {
+              width: 100%;
+            }
+          }
+          &:focus {
+            outline: none;
+          }
+          &:after {
+            content: "";
+            display: block;
+            width: 0;
+            background-color: $brand-red;
+            height: 2px;
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            left: 0;
+            transition: 0.2s all;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+        &.current_page_item {
+          a {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}

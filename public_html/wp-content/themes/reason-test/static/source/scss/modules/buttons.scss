@@ -1,0 +1,105 @@
+.nav-button {
+  padding: 8px 15px;
+  font-family: $font-primary;
+  border-left: 1px solid #ccc;
+  display: block;
+  color: black;
+  font-weight: bold;
+  border-bottom: 3px solid $brand-red;
+  transition: 0.2s all;
+  &:hover,
+  &--active {
+    color: white;
+    background-color: $brand-red;
+  }
+}
+
+.button {
+  display: block;
+  padding: 15px 20px;
+  border-radius: 25px;
+  text-align: center;
+  transition: 0.2s all;
+  font-size: 0.875;
+  font-weight: bold;
+  font-family: $font-primary;
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  &-border {
+    &--white {
+      border: 2px solid white;
+      color: white;
+      &:hover,
+      &:focus {
+        background-color: white;
+        color: $brand-red;
+      }
+    }
+    &--red {
+      border: 2px solid $brand-red;
+      color: $brand-red;
+      &:hover,
+      &:focus {
+        background-color: $brand-red;
+        color: white;
+      }
+    }
+  }
+
+  &-fill {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      transition: 0.2s all;
+    }
+
+    &:hover,
+    &:focus {
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &--red {
+      background-color: $brand-red;
+      color: white;
+
+      &:after {
+        background-color: white;
+      }
+
+      &:hover,
+      &:focus {
+        color: $brand-red;
+      }
+    }
+
+    &--white {
+      background-color: white;
+      color: $brand-red;
+
+      &:after {
+        background-color: $brand-red;
+      }
+
+      &:hover,
+      &:focus {
+        color: white;
+      }
+    }
+  }
+}
